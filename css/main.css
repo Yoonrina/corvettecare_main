@@ -1,0 +1,991 @@
+/* main */
+
+/* sc_01 */
+.sc_01{
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 150px;
+  position: relative;
+  /* background: #f00; */
+}
+.sc_01 .bg_wrap{
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  transition: height cubic-bezier(0.76, 0.09, 0.215, 1) .6s;
+}
+.sc_01 .bg_wrap.hover_bg{
+  z-index: -1;
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.sc_01 .bg_wrap111{
+  height: 100%;
+  z-index: -3;
+}
+.sc_01 .bg_wrap111.hover_bg{
+  z-index: -3;
+}
+.sc_01 .bg_op::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+.sc_01 .bg_op::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.25) 100%);
+}
+.sc_01 .bg_wrap::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.25) 100%);
+}
+.sc_01 .text_wrap{
+  color: #fff;
+  width: 92%;
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 100px 0 120px;
+}
+.sc_01 .text_wrap .txt1{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.sc_01 .text_wrap .txt1::before{
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 18px;
+  background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/flag.svg) center/100% no-repeat;
+  margin-right: 10px;
+}
+.sc_01 .text_wrap .main_title{
+  width: 100%;
+}
+.sc_01 .text_wrap .main_title > a{
+  position: relative;
+  font-size: 8vw;
+  font-weight: 800;
+}
+.sc_01 .text_wrap .main_title > a:hover{
+  color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 2px;
+}
+.sc_01 .text_wrap .main_title > a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform ease .4s;
+  transform-origin: 100% 50%;
+}
+.sc_01 .text_wrap .main_title > a:hover:after{
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+.sc_01 .over{
+  display: inline-block;
+  margin-bottom: -23px;
+}
+.sc_01 .over span{
+  display: inline-block;
+}
+
+.sc_01 .text_wrap .txt2{
+  font-size: 25px;
+  font-weight: 500;
+  width: 65%;
+  margin: 40px 0 0 auto;
+}
+
+/* sc_02 */
+.sc_02{
+  width: 92%;
+  max-width: 1870px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: -80px;
+}
+.sc_02 .intro_box{
+  width: calc(50% - 25px);
+  position: relative;
+}
+.sc_02 .in01{
+  float: left;
+}
+.sc_02 .in02{
+  float: right;
+}
+.sc_02 .txt_box{
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+  width: 85%;
+  background: #fff;
+  text-align: center;
+  padding: 40px;
+  transition: background-color ease .4s, color ease .4s;
+}
+.sc_02 .intro_box:hover .txt_box{
+  background: #ff0402;
+  color: #fff;
+}
+.sc_02 .txt_box .main_title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.sc_02 .txt_box .txt{
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* sc_03 */
+.sc_03{
+  margin-top: 150px;
+}
+.sc_03 .inner{
+  margin-bottom: 150px;
+}
+.sc_03 .main_title{
+  font-size: 134px;
+  font-weight: 800;
+  color: #ff0402;
+  margin-bottom: 60px;
+}
+.sc_03 .sc03wrap{
+  position: relative;
+  overflow: hidden;
+}
+
+/* 슬라이드 */
+.sc_03 .reviews_box{
+  width: 70%;
+  float: right;
+}
+
+.sc_03 .reviews_box .reviews_cont{
+  visibility: hidden;
+}
+.sc_03 .reviews_box .reviews_cont.swiper-slide-active{
+  visibility: visible;
+}
+
+.sc_03 .reviews_cont .score{
+  width: 113px;
+  height: 20px;
+  background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/stars.svg) left center/113px no-repeat;
+  margin: 12px 0px 42px;
+}
+.sc_03 .reviews_cont .r_v_txt{
+  font-size: 38px;
+  font-family: 'Domine', serif;
+  line-height: 45px;
+  margin-bottom: 30px;
+}
+.sc_03 .reviews_cont .name{
+  font-size: 18px;
+}
+
+/* 버튼 */
+.sc03wrap .controls{
+  width: 30%;
+  float: left;
+}
+.sc_03 .sc03wrap .slide_btn{}
+.sc_03 .sc03wrap .r_v_btn{
+  position: absolute;
+  right: 0;
+  top: 15px;
+  font-size: 13px;
+  font-weight: 800;
+  z-index: 1;
+}
+.sc_03 .sc03wrap .r_v_btn::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background: #ff0402;
+  transform: scaleX(1);
+  transition: transform ease .4s;
+  transform-origin: 0 50%;
+}
+.sc_03 .sc03wrap .r_v_btn:hover:after{
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+}
+
+.sc_03 .reviews_bg{
+  position: relative;
+}
+.sc_03 .reviews_bg::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to top, #1a1a1a, rgba(26, 26, 26, 0));
+}
+.sc_03 .reviews_bg::after{
+  content: '';
+  display: block;
+  padding-top: 60px;
+  background: #1a1a1a;
+}
+
+/* sc_04 */
+.sc_04{
+  background: #1a1a1a;
+  color: #fff;
+}
+.sc_04 .cont_head{
+  margin-bottom: 80px;
+}
+.sc_04 .cont_head .txt{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.sc_04 .cont_head .txt::before{
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 18px;
+  background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/flag.svg) center/100% no-repeat;
+  margin-right: 10px;
+}
+.sc_04 .cont_head .main_title{
+  font-size: 100px;
+  font-weight: 800;
+}
+.sc_04 .restorations_pc{
+  margin-bottom: 150px;
+}
+.sc_04 .rest_tab_title{
+  border-bottom: 2px solid #ff0402;
+  margin-bottom: 40px;
+  position: relative;
+}
+.sc_04 .rest_tab_title::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.sc_04 .rest_tab_title .rest_teb{
+  width: calc(100%/3);
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  position: relative;
+}
+.sc_04 .rest_tab_title .rest_teb .car_name{
+  font-size: 40px;
+  font-weight: 800;
+  margin-right: 20px;
+  padding-right: 15px;
+  border-right: 2px solid #6c6c6c;
+}
+.sc_04 .rest_tab_title .rest_teb .year{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sc_04 .rest_tab_title .bar{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100%/3);
+  height: 4px;
+  background: #ff0402;
+  transition: left ease .4s;
+}
+.sc_04 .rest_teb:nth-child(1).on ~ .bar{
+  left: 0;
+}
+.sc_04 .rest_teb:nth-child(2).on ~ .bar{
+  left: 33.33%;
+}
+.sc_04 .rest_teb:nth-child(3).on ~ .bar{
+  left: 66.66%;
+}
+.sc_04 .rest_teb_item{
+  width: 100%;
+  position: relative;
+}
+.sc_04 .rest_item{
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  transition: opacity cubic-bezier(0.76, 0.09, 0.215, 1) .4s
+}
+.sc_04 .rest_item.on{
+  opacity: 1;
+  visibility: visible;
+  position: initial;
+}
+.sc_04 .rest_item .img_wrap{
+  width: 65%;
+  float: left;
+}
+.sc_04 .rest_item .text_wrap{
+  width: 30%;
+  float: right;
+}
+.sc_04 .rest_item .text_wrap .txt{
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+/* 모바일 */
+.sc_04 .restorations_m{
+  margin: 0 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.sc_04 .rest_m_item >a{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 2px solid #ff0402;
+  padding: 5px 0;
+  position: relative;
+}
+.sc_04 .rest_m_item >a::before{
+  content: "";
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+}
+.sc_04 .rest_m_item >a::after{
+  content: "";
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+}
+.sc_04 .rest_m_item.on >a::before{
+  opacity: 0;
+}
+.sc_04 .rest_m_item .car_name{
+  height: 100%;
+  line-height: 37px;
+  font-size: 25px;
+  font-weight: 800;
+  margin-right: 25px;
+  padding-right: 25px;
+  border-right: 2px solid #6c6c6c;
+}
+.sc_04 .rest_m_item .year{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sc_04 .rest_m_sub{
+  height: 0;
+  overflow: hidden;
+}
+.sc_04 .rest_m_item.on .rest_m_sub{
+  height: auto;
+  /* 처음에 켜져있는 상태 */
+}
+.sc_04 .rest_m_sub .sub_wrap{
+  padding: 20px 0 45px;
+  border-bottom: 2px solid #ff0402;
+}
+.sc_04 .rest_m_sub .img_wrap{
+  margin-bottom: 30px;
+}
+.sc_04 .rest_m_sub .txt{
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+.sc_04 .recently{}
+.sc_04 .recently .title{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.sc_04 .recently .r_cont{
+  width: 40%;
+  color: #000;
+}
+.sc_04 .recently .r_cont .img_wrap{
+  overflow: hidden;
+}
+.sc_04 .recently .r_cont .img_wrap img{
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .6s;
+}
+.sc_04 .recently .r_cont:hover .img_wrap img{
+  transform: scale(1.1);
+}
+.sc_04 .recently .r_cont .text_wrap{
+  padding-top: 30px;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .6s;
+  background: #fff;
+}
+.sc_04 .recently .r_cont:hover .text_wrap{
+  transform: translateY(-30px);
+}
+.sc_04 .recently .r_cont .text_wrap .name{
+  font-size: 26px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.sc_04 .recently .r_cont .text_wrap .release{
+  font-size: 20px;
+  margin-right: 15px;
+}
+.sc_04 .recently .r_cont .text_wrap .kind{
+  font-size: 20px;
+  margin-right: 15px;
+}
+.sc_04 .recently .r_cont .text_wrap .price{
+  font-size: 20px;
+}
+
+.sc_04 .recently .r_box{
+  overflow: hidden;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 257px;
+  padding-right: 257px;
+}
+.sc_04 .recently .r_box .inner{
+  margin: 0;
+  margin-top: 80px;
+  width: 100%;
+}
+.sc_04 .inner .controls{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.sc_04 .recently .r_box .inner .main_more_btn{
+  color: #000;
+}
+.sc_04 .recently .r_box .inner .main_more_btn::before{
+  background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top left/100% 2px no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top left/2px 100% no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) bottom left/100% 2px no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top right/2px 12px no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) bottom right/2px 12px no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/arrow-right.svg) left -24px top 19px/24px no-repeat;
+}
+.sc_04 .recently .r_box .inner .main_more_btn:hover::before{
+  background-position: top left,top left,bottom left,top right,bottom right,left 14px top 19px;
+  transform: translate(-20px,-50%);
+}
+.sc_04 .recently .r_box .inner .main_more_btn::after{
+  background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/arrow-right.svg) center/100% no-repeat;
+}
+
+.sc_04 .swiper-scrollbar{
+  height: 2px;
+  background: #ff0402;
+  opacity: 1 !important;
+  border-radius: 0;
+}
+.sc_04 .swiper-scrollbar .swiper-scrollbar-drag{
+  height: 5px;
+  background: #ff0402;
+  top: -5px;
+  border-radius: 0;
+}
+
+.sc_04 .bg_white{
+  width: 100%;
+  height: 461px;
+  background: #fff;
+  margin-top: -460px;
+}
+
+/* se_05 */
+.se_05{
+  margin-top: 150px;
+}
+.se_05 .cont_head{
+  margin-bottom: 80px;
+}
+.se_05 .cont_head .txt{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.se_05 .cont_head .txt::before{
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 18px;
+  background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/flag.svg) center/100% no-repeat;
+  margin-right: 10px;
+}
+.se_05 .cont_head .main_title{
+  font-size: 100px;
+  font-weight: 800;
+}
+.se_05 .about_wrap{
+  overflow: hidden;
+}
+.se_05 .about_wrap .since_wrap{
+  float: left;
+  width: 30%;
+}
+.se_05 .about_wrap .since{
+  font-size: 20px;
+  color: #ff0402;
+  line-height: 45px;
+}
+.se_05 .about_wrap .txt_wrap{
+  float: left;
+  width: 70%;
+}
+.se_05 .about_wrap .txt{
+  font-size: 25px;
+  line-height: 45px;
+}
+
+@media screen and (max-width: 1768px){
+  /* sc_04 */
+  .sc_04 .recently .r_box{
+    padding: 0 183px;
+  }
+}
+@media screen and (max-width: 1680px){
+  /* sc_04 */
+  .sc_04 .recently .r_box{
+    padding: 0 140px;
+  }
+}
+@media screen and (max-width: 1600px){
+  /* sc_04 */
+  .sc_04 .recently .r_box{
+    padding: 0 98px;
+  }
+}
+@media screen and (max-width: 1536px){
+  /* sc_01 */
+  .sc_01 .over{
+    margin-bottom: -11px;
+  }
+  /* sc_03 */
+  .sc_03 .main_title{
+    font-size: 100px;
+  }
+  /* sc_04 */
+  .sc_04 .recently .r_box{
+    padding: 0 62px;
+  }
+}
+
+@media screen and (max-width: 1520px){
+  /* sc_04 */
+  .sc_04 .recently .r_box{
+    padding: 0 58px;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  /* sc_01 */
+  .sc_01 .text_wrap{
+    max-width: 990px;
+  }
+  .sc_01 .text_wrap .txt2{
+    font-size: 20px;
+  }
+  /* sc_03 */
+  .sc_03 .main_title{
+    font-size: 100px;
+  }
+  /* recently */
+  .sc_04 .recently .r_box{
+    padding: 0 213px;
+  }
+  .sc_04 .bg_white{
+    height: 411px;
+    margin-top: -411px;
+  }
+  .sc_04 .recently .r_box .inner{
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .sc_01 .over {
+    margin-bottom: -5px;
+  }
+  .sc_04 .recently .r_box {
+    padding: 0 113px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  /* sc_01 */
+  .sc_01 {
+    min-height: 85vh;
+    padding-top: 78px;
+  }
+  .sc_01 .text_wrap .txt1{
+    font-size: 18px;
+  }
+  .sc_01 .text_wrap .txt1::before{
+    width: 45px;
+    margin-bottom: -3px;
+  }
+  .sc_01 .text_wrap{
+    padding: 120px 0 120px;
+  }
+  .sc_01 .text_wrap .main_title > a {
+    font-size: 70px;
+    line-height: 75px;
+  }
+  .sc_01 .text_wrap .main_title > a::after{
+    transform: none;
+    transition: none;
+    bottom: 7px;
+  }
+  .sc_01 .text_wrap .txt2{
+    margin: 34px 0 0 0;
+    width: 100%;
+  }
+
+  /* .sc_02 */
+  .sc_02 .intro_box{
+    width: 100%;
+    height: 500px;
+  }
+  .sc_02 .intro_box+.intro_box{
+    margin-top: 30px;
+  }
+  .sc_02 .txt_box{
+    width: 90%;
+    bottom: 37px;
+    padding: 30px;
+  }
+  .sc_02 .txt_box .main_title{
+    font-size: 30px;
+  }
+  .sc_02 .txt_box .txt {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  /* sc_03 */
+  .sc_03 {
+    margin-top: 120px;
+  }
+  .sc_03 .inner{
+    margin-bottom: 100px;
+  }
+  .sc_03 .main_title {
+    font-size: 65px;
+    margin-bottom: 40px;
+  }
+  .sc_03 .reviews_box{
+    width: 85%;
+  }
+  .sc_03 .reviews_cont .r_v_txt{
+    font-size: 33px;
+  }
+  .sc03wrap .controls{
+    width: 15%;
+  }
+  .sc_03 .reviews_box .r_v_btn{
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .sc_03 .reviews_box .r_v_btn::after{
+    bottom: -7px;
+  }
+
+  /* sc_04 */
+  .sc_04 .cont_head .txt{
+    font-size: 18px;
+  }
+  .sc_04 .cont_head .txt::before{
+    width: 47px;
+    margin-bottom: -2px;
+  }
+  .sc_04 .cont_head .main_title{
+    font-size: 70px;
+  }
+  .sc_04 .restorations_pc {
+    display: none;
+  }
+  .sc_04 .restorations_m {
+    opacity: 1;
+    visibility: visible;
+    position: initial;
+    width: 92%;
+    margin: 0 auto 120px;
+  }
+  .sc_04 .rest_m_item .car_name{
+    font-size: 30px;
+    min-width: 65px;
+  }
+  .sc_04 .recently .r_box {
+    padding: 0 25px;
+  }
+  .sc_04 .recently .title{
+    font-size: 27px;
+  }
+
+  /* se_05 */
+  .se_05 .cont_head .txt{
+    font-size: 18px;
+  }
+  .se_05 .cont_head .main_title{
+    font-size: 70px;
+  }
+  .se_05 .cont_head {
+    margin-bottom: 60px;
+  }
+  .se_05 .about_wrap .since_wrap {
+    float: none;
+    width: 100%;
+  }
+  .se_05 .about_wrap .txt_wrap {
+    float: none;
+    width: 100%;
+  }
+  .se_05 .about_wrap .txt {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+}
+
+@media screen and (max-width: 730px){
+  .sc_03 .main_title{
+    font-size: 50px;
+  }
+  .sc_03 .reviews_box {
+    width: 100%;
+    float: none;
+  }
+  .sc03wrap .controls {
+    width: 100%;
+    float: none;
+    margin-top: 30px;
+  }
+  .sc_03 .reviews_cont .r_v_txt {
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  /* sc_01 */
+  .sc_01{
+    min-height: 80vh;
+  }
+  .sc_01 .text_wrap {
+    padding: 100px 0 120px;
+  }
+  .sc_01 .text_wrap .main_title > a {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .sc_01 .text_wrap .main_title > a::after{
+    bottom: 3px;
+  }
+  .sc_01 .over {
+    margin-bottom: -2px;
+}
+  .sc_01 .text_wrap .txt1 {
+    font-size: 16px;
+  }
+  .sc_01 .text_wrap .txt1::before {
+    width: 50px;
+    margin-bottom: -3px;
+    margin-right: 0;
+  }
+  .sc_01 .text_wrap .txt2 {
+    font-size: 16px;
+  }
+  .sc_02 .intro_box {
+    height: 350px;
+  }
+  .sc_02 .txt_box{
+    bottom: 18px;
+  }
+  .sc_02 .txt_box .main_title {
+    font-size: 20px;
+  }
+  .sc_02 .intro_box+.intro_box {
+    margin-top: 16px;
+  }
+
+  /* sc_03 */
+  .sc_03 {
+    margin-top: 60px;
+  }
+  .sc_03 .inner {
+    margin-bottom: 50px;
+  }
+  .sc_03 .main_title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .sc_03 .reviews_box .r_v_btn{
+    font-size: 12px;
+  }
+  .sc_03 .reviews_box .r_v_btn:hover:after {
+    transform: scaleX(1);
+  }
+  .sc_03 .reviews_cont .r_v_txt{
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .sc_03 .reviews_bg::before{
+    height: 15vh;
+  }
+  .sc_03 .reviews_bg::after{
+    padding-top: 61px;
+  }
+
+  /* sc_04 */
+  .sc_04 .cont_head {
+    margin-bottom: 30px;
+  }
+  .sc_04 .cont_head .txt {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .sc_04 .cont_head .txt::before {
+    width: 45px;
+    margin-bottom: -3px;
+    margin-right: 0px;
+  }
+  .sc_04 .cont_head .main_title {
+    font-size: 33px;
+    line-height: 35px;
+  }
+  .sc_04 .restorations_m{
+    margin: 0 auto 60px;
+  }
+  .sc_04 .recently .title{
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .sc_04 .recently .r_box {
+    padding: 0 20px;
+  }
+  .sc_04 .recently .r_box .inner {
+    margin: 25px 0 0 0;
+  }
+  .sc_04 .inner .controls{
+    margin-top: 25px;
+  }
+  .sc_04 .bg_white {
+    height: 290px;
+    margin-top: -290px;
+  }
+  .sc_04 .recently .r_box .inner .main_more_btn::before{
+    width: 40px;
+    height: 40px;
+    background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top left/100% 2px no-repeat,
+    url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top left/2px 100% no-repeat,
+    url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) bottom left/100% 2px no-repeat,
+    url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top right/2px 12px no-repeat,
+    url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) bottom right/2px 12px no-repeat,
+    url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/arrow-right.svg) left -24px top 17px/20px no-repeat;
+  }
+  .sc_04 .recently .r_box .inner .main_more_btn:hover::before{
+    background-position: top left,top left,bottom left,top right,bottom right,left 13px top 17px;
+    transform: translate(-20px,-50%);
+  }
+  .sc_04 .recently .r_box .inner .main_more_btn::after{
+    background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/arrow-right.svg) center/100% no-repeat;
+  }
+
+  /* sc_05 */
+  .se_05 {
+    margin-top: 60px;
+  }
+  .se_05 .cont_head {
+    margin-bottom: 30px;
+  }
+  .se_05 .cont_head .txt {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .se_05 .cont_head .txt::before {
+    width: 45px;
+    margin-bottom: -3px;
+    margin-right: 0px;
+  }
+  .se_05 .cont_head .main_title {
+    font-size: 33px;
+  }
+  .se_05 .about_wrap .since{
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .se_05 .about_wrap .txt{
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .sc_03 .reviews_cont .r_v_txt{
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .sc_04 .recently .r_box {
+    padding: 0 14px;
+  }
+}

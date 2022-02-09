@@ -1,0 +1,246 @@
+/* 
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"></div>
+  </div>
+</div>
+*/
+
+/* 
+font
+
+Montserrat - 300,400,500,600,700,800,900
+font-family: 'Montserrat', sans-serif;
+
+Domine - 400,500,600,700
+font-family: 'Domine', serif;
+*/
+
+/* blind */
+.blind{
+  width: 1px;height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+}
+
+/* 모든 img들은 100% */
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* inner */
+.inner{
+  width: 92%;
+  max-width: 1390px;
+  margin: 0 auto;
+}
+
+
+
+/* 바로보기 버튼 공용 main_more_btn */
+.main_more_btn{
+  display: inline-block;
+  font-weight: 800;
+  position: relative;
+  padding: 0 35px 0 22px;
+  color: #fff;
+  font-size: 14px;
+  transition: transform cubic-bezier(0.76, 0.09, 0.215, 1) .4s;
+}
+.main_more_btn:hover{
+  transform: translateX(20px);
+}
+
+.main_more_btn::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 44px;
+  width: 44px;
+  background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top left/100% 2px no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top left/2px 100% no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) bottom left/100% 2px no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top right/2px 12px no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) bottom right/2px 12px no-repeat,
+  url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/arrow-right-light.svg) left -24px top 19px/24px no-repeat;
+  transition: transform cubic-bezier(0.76, 0.09, 0.215, 1) .4s,background-position cubic-bezier(0.76, 0.09, 0.215, 1) .4s;
+}
+.main_more_btn:hover::before{
+  background-position: top left,top left,bottom left,top right,bottom right,left 14px top 19px;
+  transform: translate(-20px,-50%);
+}
+
+.main_more_btn::after{
+  content: "";
+  width: 24px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/arrow-right-light.svg) center/100% no-repeat;
+  transition: transform cubic-bezier(0.76, 0.09, 0.215, 1) .25s,opacity cubic-bezier(0.76, 0.09, 0.215, 1) .25s;
+}
+.main_more_btn:hover::after{
+  opacity: 0;
+  transform: translate(20px,-50%);
+}
+
+
+
+
+/* 슬라이드 이전 다음 공용 slide_btn */
+.slide_btn{
+  overflow: hidden;
+}
+.slide_btn .s_btn{
+  display: block;
+  float: left;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #ff0402;
+  position: relative;
+}
+.slide_btn .s_btn svg{
+  width: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+.slide_btn .s_btn.prev{}
+.slide_btn .s_btn.prev::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ff0402;
+  transform: scaleX(0);
+  transition: transform ease .4s;
+  transform-origin: 0 50%;
+  z-index: -1;
+}
+.slide_btn .s_btn.prev:hover:after{
+  transform: scaleX(1);
+  transform-origin: 100% 50%;
+}
+.slide_btn .s_btn.prev:hover .ico_prev{
+  fill: #fff;
+}
+
+.slide_btn .s_btn.next{
+  margin-left: 10px;
+}
+.slide_btn .s_btn.next::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ff0402;
+  transform: scaleX(0);
+  transition: transform ease .4s;
+  transform-origin: 100% 50%;
+  z-index: -1;
+}
+.slide_btn .s_btn.next:hover::after{
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+.slide_btn .s_btn.next:hover .ico_next{
+  fill: #fff;
+}
+
+.slide_btn .s_btn.swiper-button-disabled{
+  border-color: rgba(0,0,0,.2);
+}
+.slide_btn .s_btn.swiper-button-disabled .ico_prev,
+.slide_btn .s_btn.swiper-button-disabled .ico_next{
+  fill: rgba(0,0,0,.2);
+}
+.slide_btn .s_btn.swiper-button-disabled.prev::after,
+.slide_btn .s_btn.swiper-button-disabled.next::after{
+  background: none;
+}
+
+.slide_btn .s_btn.swiper-button-disabled.prev:hover .ico_prev,
+.slide_btn .s_btn.swiper-button-disabled.next:hover .ico_next{
+  fill: rgba(0,0,0,.2);
+}
+
+
+
+
+/* sns 아이콘 공용 */
+.sns{
+  display: block;
+  width: 44px;
+  height: 44px;
+  background: #303030;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color ease .4s;
+}
+.sns:hover{
+  background: #fff;
+}
+.sns+.sns{
+  margin-left: 10px;
+}
+.sns svg{
+  width: 20px;
+  fill: #fff;
+  transition: fill ease .4s;
+}
+.sns:hover svg{
+  fill: #000;
+}
+
+
+/* GSAP 전용 태그 */
+.over{
+  display: block;
+  overflow: hidden;
+}
+.over span{
+  display: block;
+  /* transform: translateY(30px); */
+}
+
+
+
+@media screen and (max-width: 1440px){
+  .inner{
+    max-width: 990px;
+  }
+}
+@media screen and (max-width: 500px){
+  .slide_btn .s_btn{
+    width: 40px;
+    height: 40px;
+  }
+  .main_more_btn{
+    font-size: 13px;
+  }
+  .main_more_btn::before{
+    width: 40px;
+    height: 40px;
+    background: url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top left/100% 2px no-repeat, url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top left/2px 100% no-repeat, url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) bottom left/100% 2px no-repeat, url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) top right/2px 12px no-repeat, url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/border.png) bottom right/2px 12px no-repeat, url(https://ftjhekv404-flywheel.netdna-ssl.com/wp-content/themes/corvette-care/dist/img/icons/arrow-right-light.svg) left -24px top 17px/20px no-repeat;
+  }
+  .main_more_btn:hover::before{
+    background-position: top left,top left,bottom left,top right,bottom right,left 13px top 17px;
+    transform: translate(-20px,-50%);
+  }
+  .main_more_btn::after{
+    width: 20px;
+    right: 9px;
+  }
+}
