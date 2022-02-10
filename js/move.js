@@ -48,6 +48,26 @@ $('#op3').each(function(index,item){
 })
 
 
+//sc_02
+$('.scrub').each(function(index,item){
+
+  gsap.fromTo(item,{
+    yPercent:-5,
+  },{
+    scrollTrigger:{
+      trigger:item,
+      start:"-10% 100%",
+      end:"50% 0%",
+      //markers:true,
+      scrub:1,
+    },
+    yPercent:0,
+    duration:1,
+  })
+
+})
+
+
 //sc_03
 $('.up').each(function(index,item){
 
